@@ -1,0 +1,15 @@
+<div class="container page-wrap">
+  <h1 class="page-title">Shop by Collection</h1>
+  <div class="coll-grid">
+  {% for collection in collections %}
+    <a href="{{ collection.url }}" class="coll-card">
+      {% if collection.image %}
+        <img src="{{ collection.image | image_url: width: 600 }}" alt="{{ collection.title | escape }}">
+      {% else %}
+        {{ 'collection-1' | placeholder_svg_tag }}
+      {% endif %}
+      <span>{{ collection.title }} →</span>
+    </a>
+  {% endfor %}
+  </div>
+</div>

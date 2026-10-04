@@ -1,0 +1,9 @@
+<div class="container page-wrap">
+  <h1 class="page-title">Search {% if search.terms %}for "{{ search.terms }}"{% endif %}</h1>
+  <form action="/search" method="get"><input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search dresses, abayas, lawn..."><button class="btn btn-dark" type="submit">Search</button></form>
+  <div class="product-grid" style="margin-top:20px">
+  {% for item in search.results %}
+    {% if item.object_type == 'product' %}{% render 'product-card', product: item %}{% endif %}
+  {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="announce">{{ section.settings.announcement }}</div>
+<header class="site-header">
+  <div class="container header-in">
+    <button class="menu-btn" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    <a href="/" class="logo">{{ section.settings.logo_text }}</a>
+    <nav class="nav">
+      {% for link in linklists[section.settings.menu].links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+      {% if linklists[section.settings.menu].links.size == 0 %}
+        <a href="/">Home</a><a href="/collections/all">Shop</a><a href="/collections/new">New In</a><a href="/pages/about">About</a>
+      {% endif %}
+    </nav>
+    <div class="header-icons">
+      <a href="/search">⌕</a>
+      <a href="/account">♡</a>
+      <a href="/cart">Bag (<span id="cart-count">{{ cart.item_count }}</span>)</a>
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <a href="/">Home</a><a href="/collections/all">Shop All</a><a href="/collections/new">New In</a><a href="/collections/sale">Sale</a><a href="/cart">Bag</a>
+  </div>
+</header>
+{% schema %}
+{"name":"Header","settings":[
+{"type":"text","id":"announcement","label":"Announcement bar","default":"FREE SHIPPING OVER $75 • NEW DROP: FESTIVE EDIT LIVE"},
+{"type":"text","id":"logo_text","label":"Logo text","default":"Velvetara."},
+{"type":"link_list","id":"menu","label":"Menu","default":"main-menu"}
+]}
+{% endschema %}

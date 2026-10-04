@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1>{{ section.settings.heading }}</h1>
+      <p class="sub">{{ section.settings.subtext }}</p>
+      <div class="cta-row">
+        <a href="{{ section.settings.btn_link }}" class="btn btn-dark">{{ section.settings.btn_text }}</a>
+        <a href="/collections/all" class="btn btn-light">Shop Bestsellers</a>
+      </div>
+      <div class="hero-proof"><span>★★★★★</span> {{ section.settings.proof }}</div>
+    </div>
+    <div class="hero-img">
+      {% if section.settings.image %}
+        <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Boutique hero">
+      {% else %}
+        <div class="hero-fallback">
+          <span>NEW<br>SEASON</span>
+          <b>Festive<br>Edit '26</b>
+          <i>Dresses • Abayas • Lawn • Luxury Pret</i>
+        </div>
+      {% endif %}
+      <div class="hero-card">🔥 {{ section.settings.card_text }}</div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{"name":"Hero","settings":[
+{"type":"text","id":"eyebrow","label":"Eyebrow","default":"NEW SEASON • BOUTIQUE EXCLUSIVE"},
+{"type":"text","id":"heading","label":"Heading","default":"Elegance you wear every day."},
+{"type":"textarea","id":"subtext","label":"Subtext","default":"Designer-inspired dresses, abayas & luxury lawn — stitched to perfection, priced honestly."},
+{"type":"text","id":"btn_text","label":"Button text","default":"Shop New Arrivals →"},
+{"type":"url","id":"btn_link","label":"Button link"},
+{"type":"image_picker","id":"image","label":"Hero image"},
+{"type":"text","id":"proof","label":"Proof text","default":"4.9 — Loved by 12,000+ customers"},
+{"type":"text","id":"card_text","label":"Floating card","default":"Eid Drop — Up to 30% Off"}
+]}
+{% endschema %}

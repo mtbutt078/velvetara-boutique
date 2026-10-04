@@ -1,0 +1,18 @@
+<section class="testi">
+<div class="container">
+<p class="eyebrow" style="text-align:center">Reviews</p>
+<h2 style="text-align:center">{{ section.settings.heading }}</h2>
+<div class="testi-grid">
+{% for block in section.blocks %}
+<div class="t-card"><span>★★★★★</span><p>"{{ block.settings.text }}"</p><b>{{ block.settings.name }}</b><small>{{ block.settings.meta }}</small></div>
+{% endfor %}
+</div>
+</div>
+</section>
+{% schema %}
+{"name":"Testimonials","settings":[{"type":"text","id":"heading","label":"Heading","default":"Loved by 12,000+ women"}],"blocks":[{"type":"review","name":"Review","settings":[
+{"type":"textarea","id":"text","label":"Text","default":"Fabric quality is premium, stitching is perfect. Got so many compliments on Eid!"},
+{"type":"text","id":"name","label":"Name","default":"Ayesha K."},
+{"type":"text","id":"meta","label":"Meta","default":"Verified Buyer — Karachi"}
+]}],"presets":[{"name":"Testimonials","blocks":[{"type":"review"},{"type":"review"},{"type":"review"}]}]}
+{% endschema %}

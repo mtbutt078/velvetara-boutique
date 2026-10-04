@@ -1,0 +1,42 @@
+<div class="container product-page">
+  <div class="product-layout">
+    <div class="product-media">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+      {% for image in product.images offset:1 limit:3 %}
+        <img src="{{ image | image_url: width: 600 }}" alt="{{ image.alt | escape }}" style="margin-top:12px">
+      {% endfor %}
+    </div>
+    <div class="product-info">
+      <p class="eyebrow">{{ product.vendor }}</p>
+      <h1>{{ product.title }}</h1>
+      <div class="price-lg">{{ product.price | money }}{% if product.compare_at_price > product.price %} <s class="muted">{{ product.compare_at_price | money }}</s> <span class="sale-badge">SALE</span>{% endif %}</div>
+      <div class="rte">{{ product.description }}</div>
+      {% form 'product', product %}
+        {% if product.variants.size > 1 %}
+          <label>Size / Variant</label>
+          <select name="id">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>{{ variant.title }} — {{ variant.price | money }}</option>
+            {% endfor %}
+          </select>
+        {% else %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {% endif %}
+        <label>Quantity</label>
+        <input type="number" name="quantity" value="1" min="1">
+        <button type="submit" class="btn btn-dark" {% unless product.available %}disabled{% endunless %}>
+          {% if product.available %}Add to Bag — {{ product.price | money }}{% else %}Sold Out{% endif %}
+        </button>
+      {% endform %}
+      <ul class="trust-list">
+        <li>✓ Free shipping over $75</li>
+        <li>✓ 14-day easy returns</li>
+        <li>✓ Cash on Delivery available</li>
+      </ul>
+    </div>
+  </div>
+</div>

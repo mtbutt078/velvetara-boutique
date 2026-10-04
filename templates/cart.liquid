@@ -1,0 +1,28 @@
+<div class="container page-wrap">
+  <h1 class="page-title">Your Bag ({{ cart.item_count }})</h1>
+  {% if cart.item_count > 0 %}
+    {% form 'cart', cart %}
+    <div class="cart-items">
+      {% for item in cart.items %}
+        <div class="cart-row">
+          <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title | escape }}">
+          <div>
+            <b>{{ item.product.title }}</b>
+            <p class="muted">{{ item.variant.title }} — {{ item.price | money }}</p>
+            <input type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+            <a href="{{ item.url_to_remove }}">Remove</a>
+          </div>
+          <b>{{ item.line_price | money }}</b>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="cart-foot">
+      <p>Subtotal: <b>{{ cart.total_price | money }}</b></p>
+      <button type="submit" name="update" class="btn btn-light">Update</button>
+      <button type="submit" name="checkout" class="btn btn-dark">Checkout →</button>
+    </div>
+    {% endform %}
+  {% else %}
+    <p>Your bag is empty. <a href="/collections/all">Continue shopping →</a></p>
+  {% endif %}
+</div>

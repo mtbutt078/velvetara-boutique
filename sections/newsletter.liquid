@@ -1,0 +1,14 @@
+<section class="container sec">
+<div class="news">
+<h2>{{ section.settings.heading }}</h2>
+<p>{{ section.settings.sub }}</p>
+{% form 'customer' %}{% if form.posted_successfully? %}<p><b>Thanks! Check your inbox for 10% off.</b></p>{% else %}<div class="news-row"><input type="email" name="contact[email]" placeholder="Your email address" required><button class="btn btn-dark" type="submit">Get 10% Off</button></div>{% endif %}{% endform %}
+<small>No spam. Unsubscribe anytime.</small>
+</div>
+</section>
+{% schema %}
+{"name":"Newsletter","settings":[
+{"type":"text","id":"heading","label":"Heading","default":"Get 10% off your first order"},
+{"type":"text","id":"sub","label":"Subtext","default":"Join the list for new drops, private sales & style notes."}
+],"presets":[{"name":"Newsletter"}]}
+{% endschema %}

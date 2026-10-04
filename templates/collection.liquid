@@ -1,0 +1,14 @@
+<div class="container page-wrap">
+  <h1 class="page-title">{{ collection.title }}</h1>
+  <p class="muted">{{ collection.description }}</p>
+  {% paginate collection.products by 12 %}
+  <div class="product-grid">
+    {% for product in collection.products %}
+      {% render 'product-card', product: product %}
+    {% else %}
+      <p>No products in this collection. Add products in Shopify Admin.</p>
+    {% endfor %}
+  </div>
+  {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
+  {% endpaginate %}
+</div>
