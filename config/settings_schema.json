@@ -1,8 +1,1 @@
-{
-  "name": "Velvetara Boutique",
-  "settings": [
-    { "type": "header", "content": "Branding" },
-    { "type": "color", "id": "bg", "label": "Background", "default": "#fdf9f5" },
-    { "type": "color", "id": "accent", "label": "Accent", "default": "#b76e4a" }
-  ]
-}
+[]
