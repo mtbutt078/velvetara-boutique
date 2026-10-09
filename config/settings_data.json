@@ -36,6 +36,17 @@
       "collection-list": {
         "type": "collection-list",
         "blocks": {
+          "category_epfd4K": {
+            "type": "category",
+            "settings": {
+              "title": "Simple and beautiful dress",
+              "count": "120+ styles",
+              "tag": "BESTSELLER",
+              "emoji": "👗",
+              "image": "shopify://shop_images/image_20261010_011605.jpg",
+              "link": ""
+            }
+          },
           "category_rkLreh": {
             "type": "category",
             "settings": {
@@ -60,6 +71,7 @@
           }
         },
         "block_order": [
+          "category_epfd4K",
           "category_rkLreh",
           "category_ykCyQH"
         ],
