@@ -1,1 +1,109 @@
-{"current":{"bg":"#fdf9f5","accent":"#b76e4a"}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "bg": "#fdf9f5",
+    "accent": "#b76e4a",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "announcement": "FREE SHIPPING OVER $75 • NEW DROP: FESTIVE EDIT LIVE",
+          "logo_text": "Velvetara.",
+          "menu": "main-menu"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "eyebrow": "NEW SEASON • BOUTIQUE EXCLUSIVE",
+          "heading": "Elegance you wear every day.",
+          "subtext": "Designer-inspired dresses, abayas & luxury lawn — stitched to perfection, priced honestly.",
+          "btn_text": "Shop New Arrivals →",
+          "btn_link": "",
+          "image": "shopify://shop_images/image_20261010_010903.jpg",
+          "proof": "4.9 — Loved by 12,000+ customers",
+          "card_text": "Eid Drop — Up to 30% Off"
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "category_rkLreh": {
+            "type": "category",
+            "settings": {
+              "title": "Luxury Lawn cotton dress",
+              "count": "20+ styles",
+              "tag": "BESTSELLER",
+              "emoji": "",
+              "image": "shopify://shop_images/image_20261010_011433.jpg",
+              "link": ""
+            }
+          },
+          "category_ykCyQH": {
+            "type": "category",
+            "settings": {
+              "title": "Luxury Lawn",
+              "count": "120+ styles",
+              "tag": "BESTSELLER",
+              "emoji": "👗",
+              "image": "shopify://shop_images/image_20261010_011152-remove-text-for-clean-collection-image.jpg",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "category_rkLreh",
+          "category_ykCyQH"
+        ],
+        "settings": {
+          "heading": "Shop by Category"
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "settings": {
+          "heading": "This Week's Bestsellers",
+          "collection": "",
+          "limit": 8
+        }
+      },
+      "promo-grid": {
+        "type": "promo-grid",
+        "settings": {
+          "tag1": "FLAT 30% OFF",
+          "title1": "Festive Edit — Luxury Pret",
+          "tag2": "NEW",
+          "title2": "Abaya Collection",
+          "tag3": "2 FOR $99",
+          "title3": "Everyday Lawn Essentials"
+        }
+      },
+      "testimonials": {
+        "type": "testimonials",
+        "settings": {
+          "heading": "Loved by 12,000+ women"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "heading": "Get 10% off your first order",
+          "sub": "Join the list for new drops, private sales & style notes."
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      }
+    },
+    "content_for_index": []
+  }
+}
