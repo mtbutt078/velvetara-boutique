@@ -36,11 +36,22 @@
       "collection-list": {
         "type": "collection-list",
         "blocks": {
+          "category_xFKPBJ": {
+            "type": "category",
+            "settings": {
+              "title": "Crinkle luxury Dress",
+              "count": "",
+              "tag": "BESTSELLER",
+              "emoji": "👗",
+              "image": "shopify://shop_images/image_20261010_011737-remove-tag-for-clean-shopify-image.jpg",
+              "link": ""
+            }
+          },
           "category_epfd4K": {
             "type": "category",
             "settings": {
               "title": "Simple and beautiful dress",
-              "count": "120+ styles",
+              "count": "",
               "tag": "BESTSELLER",
               "emoji": "👗",
               "image": "shopify://shop_images/image_20261010_011605.jpg",
@@ -62,7 +73,7 @@
             "type": "category",
             "settings": {
               "title": "Luxury Lawn",
-              "count": "120+ styles",
+              "count": "",
               "tag": "BESTSELLER",
               "emoji": "👗",
               "image": "shopify://shop_images/image_20261010_011152-remove-text-for-clean-collection-image.jpg",
@@ -71,6 +82,7 @@
           }
         },
         "block_order": [
+          "category_xFKPBJ",
           "category_epfd4K",
           "category_rkLreh",
           "category_ykCyQH"
@@ -82,8 +94,8 @@
       "featured-collection": {
         "type": "featured-collection",
         "settings": {
-          "heading": "This Week's Bestsellers",
-          "collection": "",
+          "heading": "Every Week's Bestsellers",
+          "collection": "blush-pink-floral-printed-lawn-2-piece-soft-cotton-stitched-co-ord-set-for-girls-summer-daily-wear",
           "limit": 8
         }
       },
@@ -91,10 +103,10 @@
         "type": "promo-grid",
         "settings": {
           "tag1": "FLAT 30% OFF",
-          "title1": "Festive Edit — Luxury Pret",
+          "title1": "Festive Edit — Luxury Dress",
           "tag2": "NEW",
-          "title2": "Abaya Collection",
-          "tag3": "2 FOR $99",
+          "title2": "Events Collection",
+          "tag3": "2 FOR $50",
           "title3": "Everyday Lawn Essentials"
         }
       },
