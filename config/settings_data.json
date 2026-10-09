@@ -113,6 +113,14 @@
       "testimonials": {
         "type": "testimonials",
         "blocks": {
+          "review_LLPbFz": {
+            "type": "review",
+            "settings": {
+              "text": "\"Highly Recommended\"\nI was worried about online quality but this dress exceeded my expectations. Lightweight, cool, and buttons are good quality. Value for money.",
+              "name": "— Zainab M",
+              "meta": "Verified Buyer — Rawalpindi"
+            }
+          },
           "review_p7Cd8N": {
             "type": "review",
             "settings": {
@@ -131,6 +139,7 @@
           }
         },
         "block_order": [
+          "review_LLPbFz",
           "review_p7Cd8N",
           "review_e8fWij"
         ],
