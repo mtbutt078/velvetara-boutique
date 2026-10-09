@@ -112,8 +112,30 @@
       },
       "testimonials": {
         "type": "testimonials",
+        "blocks": {
+          "review_p7Cd8N": {
+            "type": "review",
+            "settings": {
+              "text": "\"Best lawn for summer\"\nThis is my 3rd order from you. This pink print is so cute and not see-through at all. Trouser size is perfect. Will order more colors.",
+              "name": "— Fatima S",
+              "meta": "Verified Buyer — Multan"
+            }
+          },
+          "review_e8fWij": {
+            "type": "review",
+            "settings": {
+              "text": "Fabric quality is premium, stitching is perfect. Got so many compliments on Eid!",
+              "name": "Ayesha K.",
+              "meta": "Verified Buyer — Karachi"
+            }
+          }
+        },
+        "block_order": [
+          "review_p7Cd8N",
+          "review_e8fWij"
+        ],
         "settings": {
-          "heading": "Loved by 12,000+ women"
+          "heading": "Loved By Our Happy Customers"
         }
       },
       "newsletter": {
